@@ -2,7 +2,7 @@
 
 let img; // creates image variable
 let myFont;
-
+let bgMusic;
 let imgSize; // element size
 
 let coordx = 0 // starting x coordinate
@@ -17,6 +17,7 @@ let canvasW, canvasH;
 
 function preload() {  
   img = loadImage('monk3.jpg'); // preloads picture!
+  bgMusic = loadSound('MusicMeditate.mp3');
   // myFont = loadFont('BeautifulPeople.ttf');
 }
 
@@ -39,7 +40,7 @@ function setup() {
   
   canvasW = (min(windowWidth,windowHeight))-40;
   canvasH = (min(windowWidth,windowHeight))-40;
-    
+  bgMusic.play();
   // inp = createFileInput(handleFile);
   // inp.position(min(windowWidth,windowHeight)-80, 20);
   
